@@ -3,11 +3,11 @@
 # Author: Kunde Hong
 # Command format: Instruction 
 
-FROM tmtbrain/tm-scipy-notebook
+FROM tmtbrain/tm-scipy-notebook:v1
 
 MAINTAINER Trend Micro <kunde_hong@trend.com.tw>
 
-RUN /opt/conda/bin/pip install -U keras
+RUN /opt/conda/bin/pip install keras==1.2.2
 COPY keras.json /home/$NB_USER/.keras/
 
 USER $NB_USER
